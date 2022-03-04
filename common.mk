@@ -86,13 +86,18 @@ TARGET_SCREEN_WIDTH := 1080
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
-    android.hardware.camera.provider@2.4-service_64
+    android.hardware.camera.provider@2.4-service_64 \
+    GCamGo
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml \
     frameworks/native/data/etc/android.hardware.camera.front.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.front.xml \
     frameworks/native/data/etc/android.hardware.camera.full.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.full.xml \
     frameworks/native/data/etc/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/GCamGo/system/etc/permissions/com.google.android.GCamGo.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.google.android.GCamGo.xml \
+    $(LOCAL_PATH)/GCamGo/system/etc/configs/hiddenapi-package-whitelist-GCamGo.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/hiddenapi-package-whitelist-GCamGo.xml
 
 # Component override
 PRODUCT_COPY_FILES += \
