@@ -1,0 +1,2 @@
+# android_device_realme_sm7125-common
+android_device_realme_sm7125-common
